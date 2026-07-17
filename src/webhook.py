@@ -61,10 +61,9 @@ async def receive_message(
                                                         for message in messages:
                                                                                 sender = message.get("from", "unknown")
                                                                                 msg_type = message.get("type", "unknown")
-
                                                             if msg_type == "text":
-                                                                                        text_body = message.get("text", {}).get("body", "")
-                                                                                        logger.info(f"Text message from {sender}: {text_body}")
+                                                                        text_body = message.get("text", {}).get("body", "")
+                                                                        logger.info(f"Text message from {sender}: {text_body}")
         else:
                                     logger.info(f"{msg_type} message from {sender}")
 
